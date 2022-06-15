@@ -1,4 +1,6 @@
 package com.varun;
+//349. Intersection of Two Arrays
+
 
 import java.util.Arrays;
 import java.util.*;
@@ -25,8 +27,8 @@ public class IntersectionOfArray1 {
 //        System.out.println( Arrays.toString(numbersWithoutDuplicates) );
 
        int [] nums1 = {3,1,2,2,1},nums2 = {2,2};
-       Arrays.sort(nums1);
-       Arrays.sort(nums2);
+      // Arrays.sort(nums1);
+        // Arrays.sort(nums2);
         LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet( Arrays.asList(nums1) );
         Integer[] numbersWithoutDuplicates = linkedHashSet.toArray(new Integer[] {});
         System.out.println( Arrays.toString(numbersWithoutDuplicates) );
@@ -42,23 +44,39 @@ public class IntersectionOfArray1 {
     public static int[] intersection(int[] nums1, int[] nums2) {
         //int [] output=new int[Math.max(nums2.length, nums1.length)];
 //        int index=0;
-        List<Integer> output = new ArrayList<Integer>();
+
+       // Array 2 might not be sorted
+        Arrays.sort(nums2);
+        LinkedHashSet<Integer> output = new LinkedHashSet<Integer>();
         for(int ele:nums1){
             if(BinarySearch(ele,nums2)){
                 output.add(ele);
-                //index++;
+                //index++;P
             }
 
         }
 
+        //LinkedHashSet<Integer> hs = new LinkedHashSet<Integer>();
+        //int[] ints =  new int[output.size()];
+        ;
+//        for(int ele : output){
+//            hs.add(ele);
+//            //ints[index] = ele;
+//          //  index++;
+//        }
 
-        int[] ints =  new int[output.size()];
+
         int index =0;
-        for(int ele : output){
+        int[] ints = new int[output.size()];
+        for(int ele:output){
             ints[index] = ele;
-            index++;
+              index++;
         }
-        return ints;
+        //Trying to convert hashset to object array
+        //int [] ints = (int)(output.toArray());
+
+
+        return ints ;
 
     }
 
