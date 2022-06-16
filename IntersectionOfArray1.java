@@ -47,14 +47,14 @@ public class IntersectionOfArray1 {
 
        // Array 2 might not be sorted
         Arrays.sort(nums2);
-        LinkedHashSet<Integer> output = new LinkedHashSet<Integer>();
+        List<Integer> output = new ArrayList<>();
         for(int ele:nums1){
             if(BinarySearch(ele,nums2)){
                 output.add(ele);
                 //index++;P
             }
-
         }
+
 
         //LinkedHashSet<Integer> hs = new LinkedHashSet<Integer>();
         //int[] ints =  new int[output.size()];
