@@ -1,5 +1,5 @@
 package com.varun;
-// 350. Intersection of Ar
+// 350. Intersection of Array 2
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
