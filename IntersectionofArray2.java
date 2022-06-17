@@ -10,7 +10,7 @@ public class IntersectionofArray2 {
 
     }
 
-    public static List intersection(int[] nums1, int[] nums2) {
+    public static int[] intersection(int[] nums1, int[] nums2) {
         //int [] output=new int[Math.max(nums2.length, nums1.length)];
 //        int index=0;
 
