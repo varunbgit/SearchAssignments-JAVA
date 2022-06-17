@@ -44,14 +44,14 @@ public class IntersectionofArray2 {
 //        }
 
         //Coverting from List to Array as return type is Int[]
-//        int index =0;
-//        int[] ints = new int[output.size()];
-//        for(int ele:output){
-//            ints[index] = ele;
-//            index++;
-//        }
-        //return ints ;
-        return  output;
+        int index =0;
+        int[] ints = new int[output.size()];
+        for(int ele:output){
+            ints[index] = ele;
+            index++;
+        }
+        return ints ;
+    //    return  output;
     }
 
     public static boolean BinarySearch(int key,int[] nums2){
