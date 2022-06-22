@@ -2,11 +2,13 @@ package com.varun;
 //441. Arranging Coins
 public class ArrangingCoins {
     public static void main(String[] args) {
-        int k =2147483647;
+        int k =1804289383;
       //  int basicAns = basicSolution(k);
         //System.out.println(basicAns);
 
-        System.out.println(arrangeCoins(k));
+       // System.out.println(arrangeCoins(k));
+
+        System.out.println(BSearchApproach(k));
     }
 //    public static int basicSolution(int k ){
 //        int count =0;
@@ -33,4 +35,31 @@ public class ArrangingCoins {
         return (int) (Math.sqrt(2 * (long)(n) + 0.25) - 0.5);
 
     }
+
+    /*
+    Approach 3
+    the Binary search Technique
+     */
+    public static int BSearchApproach(int  n){
+        int start =1;
+        int end  = n;
+        int ans =0;
+        while(start<=end){
+            int mid = end  - (end - start)/2;
+            long sum = (long) (0.5 * mid *(mid +1));
+
+            if(sum == n){
+                return mid;
+            }
+            if (sum < n){
+                ans = mid;
+                start = mid + 1;
+            }else{
+                end  = mid -1;
+            }
+
+        }
+        return ans;
+    }
+
 }
